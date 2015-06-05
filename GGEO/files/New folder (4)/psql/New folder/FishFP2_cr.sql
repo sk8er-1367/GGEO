@@ -1,0 +1,8 @@
+SET client_encoding = 'windows-1250';
+
+CREATE TABLE Fish (
+  ID INTEGER NULL,
+  FIRSTNAME VARCHAR(30) NULL,
+  COUNT INTEGER NULL,
+  C_OMMENT TEXT NULL
+);

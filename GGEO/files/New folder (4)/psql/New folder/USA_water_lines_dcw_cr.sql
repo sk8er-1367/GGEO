@@ -1,0 +1,10 @@
+SET client_encoding = 'windows-1250';
+
+CREATE TABLE USA_water_lines_dcw (
+  F_CODE_DES VARCHAR(254) NULL,
+  HYC_DESCRI VARCHAR(254) NULL,
+  NAM VARCHAR(254) NULL,
+  ISO VARCHAR(7) NULL,
+  NAME_0 VARCHAR(54) NULL,
+  Shape_Leng FLOAT NULL
+);
