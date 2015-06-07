@@ -1,17 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package Classes;
 
-/**
- *
- * @author Sk8er
- */
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Classes;
 
 /**
  *
@@ -76,9 +64,6 @@ public class AreaIntersect extends Object
     private static boolean ovl(AreaIntersect.Rng p, AreaIntersect.Rng q) {
 	return p.mn < q.mx && q.mn < p.mx;
     }
-
-    //--------------------------------------------------------------------------
-
     private long ssss;
     private double sclx;
     private double scly;
@@ -153,9 +138,6 @@ public class AreaIntersect extends Object
 	    s += P[j].in;
 	}
     }
-
-    //-------------------------------------------------------------------------
-
     private double
     inter(Point2D[] a, Point2D[] b)
     {
@@ -232,55 +214,9 @@ public class AreaIntersect extends Object
 	for (int i = 0; i < a.length; i++) {
             A[i] = new Point2D.Double((int)(a[i].x), a[i].y);
         }
-	//return A;
-	//Point2D[] A = toPoints2DArray(a);
         return Math.abs(intersectionArea(A,b));
-//	System.out.println(intersectionArea(A, B)
-//	    + " " + intersectionArea(A, A));
     }
 
-//    /**
-//     *
-//     * @param args
-//     */
-//    public static void main(String[] args)
-//    {
-//	double a1[][] = {{2,3}, {2,3}, {2,3}, {2,4}, {3,3}, {2,3}, {2,3}};
-//	double b1[][] = {{1,1}, {1,4}, {4,4}, {4,1}, {1,1}}; // 1/2, 1/2
-//	// The redundant vertices above are to provoke errors
-//	// as good test cases should.
-//	// It is not necessary to duplicate the first vertex at the end.
-//
-//	double a2[][] = {{1,7}, {4,7}, {4, 6}, {2,6}, {2, 3}, {4,3}, {4,2}, {1,2}};
-//	double b2[][] = {{3,1}, {5,1}, {5,4}, {3,4}, {3,5}, {6,5}, {6,0}, {3,0}}; // 0, 9
-//
-//	double a3[][] = {{1,1}, {1,2}, {2,1}, {2,2}};
-//	double b3[][] = {{0,0}, {0,4}, {4,4}, {4,0}}; // 0, 1/2
-//
-//	double a4[][] = {{0,0}, {3,0}, {3,2}, {1,2}, {1,1}, {2,1}, {2,3}, {0,3}};
-//	double b4[][] = {{0,0}, {0,4}, {4,4}, {4,0}}; // -9, 11
-//
-//	double a5[][] = {{0,0}, {1,0}, {0,1}};
-//	double b5[][] = {{0,0}, {0,1}, {1,1}, {1,0}}; // -1/2, 1/2
-//
-//	double a6[][] = {{1, 3} , {2, 3} , {2, 0} , {1, 0} };
-//	double b6[][] = {{0, 1} , {3, 1} , {3, 2} , {0, 2} }; // -1, 3
-//
-//	double a7[][] = {{0,0}, {0,2}, {2,2}, {2,0}};
-//	double b7[][] = {{1, 1}, {3, 1}, {3, 3}, {1, 3}}; // -1, 4
-//
-//	double a8[][] = {{0,0}, {0,4}, {4,4}, {4,0}};
-//	double b8[][] = {{1,1}, {1,2}, {2,2}, {2,1}}; // 1, 16
-//
-//	Calc(a1, b1);
-//	Calc(a2, b2);
-//	Calc(a3, b3);
-//	Calc(a4, b4);
-//	Calc(a5, b5);
-//	Calc(a6, b6);
-//	Calc(a7, b7);
-//	Calc(a8, b8);
-//    }
 }
 
 

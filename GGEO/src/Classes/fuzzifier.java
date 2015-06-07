@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Classes;
 
 /**
@@ -9,12 +6,6 @@ package Classes;
  * @author Sk8er
  */
 public class fuzzifier {
-
-    //double[][] bitmapFunc1, bitmapFunc2, bitmapFunc3;
-
-    //public fuzzifier() {
-    //}
-
     public static double getFuzzyValue(double val, FeatureGeometryType t, double start, double end) {
         double FuzzyValue = 0;
         double length = end - start;
