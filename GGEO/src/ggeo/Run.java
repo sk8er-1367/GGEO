@@ -90,8 +90,6 @@ public class Run {
                 execI.execute(new Runnable() {
                     @Override
                     public void run() {
-                        /* do the work to be done in its own thread */
-                        //System.out.println("Running in: " + Thread.currentThread());
 
                         Coordinate[] coordinates = g.getCoordinates();
                         BitMap[] bm = new BitMap[gridNet.x*10];
@@ -104,23 +102,8 @@ public class Run {
                         for (int i = 0; i < gridNet.x; i++) {
                             for (int j = 0; j < gridNet.y; j++) {
                                 MyTile t = gridNet.getTile(i, j);
-                                //double[][] til = new double[2][2];
                                 if (FGmap.get(featureName) == FeatureGeometryType.POLYGON) {
-                                    
-                                    //Point2D.Double[] tc = t.getCoordinates();
-                                    
-//                                    Coordinate[] c = new Coordinate[5];
-//                                    c[0] = new Coordinate(tc[0].x,tc[0].y,0);
-//                                    c[1] = new Coordinate(tc[1].x,tc[1].y,0);
-//                                    c[2] = new Coordinate(tc[2].x,tc[2].y,0);
-//                                    c[3] = new Coordinate(tc[3].x,tc[3].y,0);
-//                                    c[4] = new Coordinate(tc[0].x,tc[0].y,0);
                                     double CalculatedArea = AreaIntersect.Calc(coordinates, tc);
-//                                    GeometryFactory fact = new GeometryFactory();
-//                                    LinearRing linear = new GeometryFactory().createLinearRing(c);
-//                                    Polygon poly = new Polygon(linear, null, fact);
-//                                    CalculatedArea =g.intersection(poly).getArea();
-                                    //double CalculatedArea = AreaIntersect.Calc(coordinates, tc);
                                     if(CalculatedArea > 0.000001)
                                     {
                                         t.incrementValue(featureName, CalculatedArea);
@@ -286,7 +269,6 @@ public class Run {
             System.out.println("Started at: " + startTime);
 
             List<Callable<Boolean>> tasks = new ArrayList<>();
-            //tasks.add(new JobGeometryAreaLength(readGeomFromShp("files/IRN_adm0.shp"), "city", gridNet, FGmap));
             //cities
             for(int k=0;k<cityNum;k++){
                 ArrayList<Geometry> ggg = new ArrayList<>(1);
